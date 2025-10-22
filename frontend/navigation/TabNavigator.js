@@ -4,7 +4,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-// Screens
 import HomeScreen from '../screens/HomeScreen';
 import WinterScreen from '../screens/WinterScreen';
 import SummerScreen from '../screens/SummerScreen';
@@ -57,9 +56,10 @@ export default function TabNavigator() {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
-        headerShown: false, // Use stack headers
+        headerShown: false,
         tabBarIcon: ({ color, size }) => {
           let iconName;
+
           if (route.name === 'Home') iconName = 'home-outline';
           else if (route.name === 'Cart') iconName = 'cart-outline';
           else if (route.name === 'Wishlist') iconName = 'heart-outline';
@@ -90,19 +90,28 @@ export default function TabNavigator() {
       })}
     >
       <Tab.Screen name="Home" component={HomeStack} />
-      
-      {/* Single-screen tabs with headers */}
       <Tab.Screen
         name="Cart"
         component={CartScreen}
-        options={{ headerShown: true, title: 'Cart', headerStyle: { backgroundColor: '#b8860b' }, headerTintColor: '#fff', headerTitleStyle: { fontWeight: 'bold' } }}
+        options={{
+          headerShown: true,
+          title: 'Cart',
+          headerStyle: { backgroundColor: '#b8860b' },
+          headerTintColor: '#fff',
+          headerTitleStyle: { fontWeight: 'bold' },
+        }}
       />
       <Tab.Screen
         name="Wishlist"
         component={WishlistScreen}
-        options={{ headerShown: true, title: 'Wishlist', headerStyle: { backgroundColor: '#b8860b' }, headerTintColor: '#fff', headerTitleStyle: { fontWeight: 'bold' } }}
+        options={{
+          headerShown: true,
+          title: 'Wishlist',
+          headerStyle: { backgroundColor: '#b8860b' },
+          headerTintColor: '#fff',
+          headerTitleStyle: { fontWeight: 'bold' },
+        }}
       />
-
       <Tab.Screen name="Account" component={AccountStack} />
     </Tab.Navigator>
   );

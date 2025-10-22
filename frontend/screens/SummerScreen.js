@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   Dimensions,
 } from 'react-native';
-import styles from './SummerScreenStyles'; // Import external styles
+import styles from '../styles/SummerScreenStyles'; 
 
 const pretItems = [
   { id: '1', name: 'Floral Dress', price: 'Rs.3000', rating: 4.8, image: require('../assets/summer_pret1.jpg') },
@@ -78,6 +78,7 @@ export default function SummerScreen({ navigation }) {
         </TouchableOpacity>
       </View>
 
+      {/* Product Grid */}
       <FlatList
         data={items}
         renderItem={renderItem}

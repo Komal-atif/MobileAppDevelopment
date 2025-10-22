@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { View, Text, Image, TouchableOpacity, ScrollView, Dimensions } from 'react-native';
 import { useRoute } from '@react-navigation/native';
-import { CartContext } from '../context/CartContext';
-import { WishlistContext } from '../context/WishlistContext';
-import styles from './ProductScreenStyles';
+import { CartContext } from '../context/CartContext'; 
+import { WishlistContext } from '../context/WishlistContext'; 
+import styles from '../styles/ProductScreenStyles';
 
 const screenWidth = Dimensions.get('window').width;
 
@@ -25,7 +25,11 @@ export default function ProductScreen() {
   return (
     <ScrollView style={styles.container} contentContainerStyle={{ paddingBottom: 30 }}>
       {/* Product Image */}
-      <Image source={product.image} style={[styles.productImage, { width: screenWidth * 0.9, height: screenWidth * 0.9 }]} resizeMode="contain" />
+      <Image
+        source={product.image}
+        style={[styles.productImage, { width: screenWidth * 0.9, height: screenWidth * 0.9 }]}
+        resizeMode="contain"
+      />
 
       {/* Product Info */}
       <Text style={styles.name}>{product.name}</Text>

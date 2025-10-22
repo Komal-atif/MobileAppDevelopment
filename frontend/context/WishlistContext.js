@@ -1,3 +1,4 @@
+
 import React, { createContext, useState } from 'react';
 
 export const WishlistContext = createContext();
@@ -6,7 +7,6 @@ export const WishlistProvider = ({ children }) => {
   const [wishlistItems, setWishlistItems] = useState([]);
 
   const addToWishlist = (product) => {
-    // Avoid duplicates
     if (!wishlistItems.find(item => item.id === product.id)) {
       setWishlistItems([...wishlistItems, product]);
     }

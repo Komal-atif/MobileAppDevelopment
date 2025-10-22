@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   Dimensions,
 } from 'react-native';
-import styles from './SalesScreenStyles'; // Import external styles
+import styles from '../styles/SalesScreenStyles'; 
 
 const saleItems = [
   { id: '1', name: 'Item 1', price: '$70.00', rating: 4.8, image: require('../assets/summer9.jpg') },
@@ -25,8 +25,7 @@ const saleItems = [
 const numColumns = 2;
 const itemWidth = Dimensions.get('window').width / numColumns - 20;
 
-export default function SalesScreen({ navigation }) {
-
+export default function SaleScreen({ navigation }) {
   const renderItem = ({ item }) => (
     <TouchableOpacity
       style={styles.card(itemWidth)}

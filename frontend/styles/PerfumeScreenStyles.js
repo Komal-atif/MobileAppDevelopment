@@ -23,7 +23,6 @@ export default StyleSheet.create({
   categoryImage: { width: 68, height: 68, borderRadius: 34 },
   categoryText: { fontSize: 14, color: '#333', fontWeight: '600', textAlign: 'center', marginTop: 5 },
 
-  // FlatList
   list: { paddingHorizontal: 10 },
 
   // Product Card

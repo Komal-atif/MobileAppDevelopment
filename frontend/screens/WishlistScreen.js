@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
 import { View, Text, FlatList, Image, TouchableOpacity, SafeAreaView } from 'react-native';
-import { WishlistContext } from '../context/WishlistContext';
 import Icon from 'react-native-vector-icons/Ionicons';
-import styles from './WishlistScreenStyles'; // external style
-
+import { WishlistContext } from '../context/WishlistContext'; 
+import styles from '../styles/WishlistScreenStyles'; 
 export default function WishlistScreen() {
   const { wishlistItems, removeFromWishlist } = useContext(WishlistContext);
 

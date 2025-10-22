@@ -1,4 +1,5 @@
-// screens/AccountScreen.js
+
+
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
 
@@ -7,6 +8,7 @@ const { height } = Dimensions.get('window');
 export default function AccountScreen({ navigation }) {
   return (
     <View style={styles.container}>
+
       {/* Top Half */}
       <View style={styles.topHalf}>
         <Text style={styles.logo}>KFITS</Text>
@@ -38,8 +40,15 @@ export default function AccountScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#fff' },
-  topHalf: { flex: 1, justifyContent: 'center', alignItems: 'center' },
+  container: { 
+    flex: 1, 
+    backgroundColor: '#fff' 
+  },
+  topHalf: { 
+    flex: 1, 
+    justifyContent: 'center', 
+    alignItems: 'center' 
+  },
   logo: {
     fontSize: 50,
     fontWeight: '800',
@@ -48,7 +57,7 @@ const styles = StyleSheet.create({
   },
   bottomHalf: {
     flex: 0.6,
-    backgroundColor: 'rgba(184, 134, 11, 0.15)', // lighter golden with opacity
+    backgroundColor: 'rgba(184, 134, 11, 0.15)', 
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     paddingHorizontal: 30,
@@ -65,7 +74,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     position: 'absolute',
-    bottom: 110, // slightly above the tab
+    bottom: 110,
     left: 30,
     right: 30,
   },
@@ -83,5 +92,9 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     alignItems: 'center',
   },
-  buttonText: { color: '#b8860b', fontSize: 16, fontWeight: '600' },
+  buttonText: { 
+    color: '#b8860b', 
+    fontSize: 16, 
+    fontWeight: '600' 
+  },
 });

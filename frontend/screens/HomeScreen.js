@@ -1,7 +1,8 @@
 import React from 'react';
 import { ScrollView, View, Text, Image, TouchableOpacity, SafeAreaView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import styles from './HomeScreenStyles'; // Import external styles
+
+import styles from '../styles/HomeScreenStyles';
 
 const categories = [
   { id: 2, name: 'Winter', image: require('../assets/winter.jpg'), screen: 'Winter' },
@@ -20,7 +21,7 @@ export default function HomeScreen() {
         <Text style={[styles.headingText, { color: '#b8860b' }]}>KFITS</Text>
       </View>
 
-      <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom: 150 }}>
+      <ScrollView style={{ paddingBottom: 150 }}>
         {/* Hero Image */}
         <View style={styles.heroContainer}>
           <Image source={require('../assets/home.jpg')} style={styles.heroImage} />
@@ -29,6 +30,7 @@ export default function HomeScreen() {
         {/* Categories */}
         <View style={styles.section}>
           <Text style={[styles.sectionTitle, { color: '#222' }]}>Shop by Category</Text>
+
           <View style={styles.categoryGrid}>
             {categories.map((cat) => (
               <TouchableOpacity

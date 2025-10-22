@@ -1,8 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { View, Text, FlatList, Image, TouchableOpacity, Dimensions } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import styles from './WinterScreenStyles';
-import { CartContext } from '../context/CartContext';
+import styles from '../styles/WinterScreenStyles'; 
+import { CartContext } from '../context/CartContext'; 
 import { WishlistContext } from '../context/WishlistContext';
 
 const screenWidth = Dimensions.get('window').width;
@@ -80,7 +80,8 @@ export default function WinterScreen() {
 
         <TouchableOpacity onPress={() => setSelectedCategory('Unstitched')}>
           <View style={[styles.highlightCircle, selectedCategory === 'Unstitched' && { borderColor: '#b8860b' }]}>
-            <Image source={require('../assets/unstiched.jpg')} style={styles.categoryImage} />
+            <Image source={require('../assets/unstitched1.jpg')} style={styles.categoryImage} />
+
           </View>
           <Text style={[styles.categoryText, selectedCategory === 'Unstitched' && { color: '#b8860b', fontWeight: '700' }]}>
             Unstitched
@@ -88,6 +89,7 @@ export default function WinterScreen() {
         </TouchableOpacity>
       </View>
 
+      {/* Product Grid */}
       <FlatList
         data={items}
         renderItem={renderItem}
