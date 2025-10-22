@@ -1,0 +1,35 @@
+import { StyleSheet } from 'react-native';
+
+export default StyleSheet.create({
+  container: { flex: 1, backgroundColor: '#fff', paddingTop: 20, paddingBottom: 80 },
+
+  // Breadcrumb
+  breadcrumbContainer: { marginLeft: 20, marginBottom: 15 },
+  breadcrumbText: { fontSize: 13, color: '#333', fontWeight: '500' },
+  breadcrumbSeparator: { fontWeight: '700', color: '#444' },
+
+  // Categories
+  categories: { flexDirection: 'row', justifyContent: 'center', marginBottom: 15 },
+  highlightCircle: {
+    width: 70,
+    height: 70,
+    borderRadius: 35,
+    borderWidth: 2,
+    borderColor: 'transparent',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginHorizontal: 15,
+  },
+  categoryImage: { width: 68, height: 68, borderRadius: 34 },
+  categoryText: { fontSize: 14, color: '#333', fontWeight: '600', textAlign: 'center', marginTop: 5 },
+
+  // FlatList
+  list: { paddingHorizontal: 10 },
+
+  // Product Card
+  card: { backgroundColor: '#f9f9f9', margin: 5, padding: 10, borderRadius: 10, alignItems: 'center' },
+  image: { width: '100%', height: 150, borderRadius: 8, marginBottom: 8 },
+  name: { fontSize: 16, fontWeight: '600', color: '#444' },
+  price: { fontSize: 14, color: '#888' },
+  rating: { fontSize: 12, color: '#e91e63', marginTop: 4 },
+});
